@@ -10,7 +10,7 @@ class LaravelServiceProvider extends ServiceProvider {
     public function boot()
     {
         $logger = new LogManager($this->app);
-        $this->app->bind('log', $logger);
-        $this->app->bind(LoggerInterface::class, $logger);
+        $this->app->instance('log', $logger);
+        $this->app->instance(LoggerInterface::class, $logger);
     }
 }
