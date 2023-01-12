@@ -9,7 +9,7 @@ use Tixel\SafeLogger\LogManager;
 class LaravelServiceProvider extends ServiceProvider {
     public function boot()
     {
-        $logger = $this->app->make(LogManager::class);
+        $logger = new LogManager($this->app);
         $this->app->bind('log', $logger);
         $this->app->bind(LoggerInterface::class, $logger);
     }
