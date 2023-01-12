@@ -1,0 +1,40 @@
+{
+    "name": "tixelrocks/laravel-safe-logger",
+    "type": "library",
+    "description": "A little wrapper for Laravel Logger that prevents it from crashing ever",
+    "keywords": ["logging","logger","laravel"],
+    "homepage": "https://github.com/TixelRocks/laravel-safe-logger",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tixel",
+            "email": "tech@tixel.com",
+            "homepage": "https://tixel.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "psr/log": "^1.0|^2.0|^3.0",
+        "laravel/framework": "^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "orchestra/testbench-core": "^7.16",
+        "phpstan/phpdoc-parser": "^1.15",
+        "phpstan/phpstan": "^1.4.7",
+        "phpunit/phpunit": "^9.5.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tixel\\SafeLogger\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tixel\\SafeLogger\\Providers\\LaravelServiceProvider"
+            ]
+        }
+    }
+}
