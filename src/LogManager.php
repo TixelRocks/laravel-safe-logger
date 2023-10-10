@@ -68,6 +68,26 @@ class LogManager extends LaravelLogManager {
         $this->driver()->log($level, $message, $this->mergeContexts($context));
     }
 
+    public function setChannels(array $channels): void
+    {
+        $this->channels = $channels;
+    }
+
+    public function setSharedContext(array $sharedContext): void
+    {
+        $this->sharedContext = $sharedContext;
+    }
+
+    public function setCustomCreators(array $customCreators): void
+    {
+        $this->customCreators = $customCreators;
+    }
+
+    public function setDateFormat(string $dateFormat): void
+    {
+        $this->dateFormat = $dateFormat;
+    }
+
     /**
      * @param  $userPassedContext
      * @return array
